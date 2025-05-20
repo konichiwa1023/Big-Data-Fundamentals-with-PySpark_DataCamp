@@ -1,0 +1,4 @@
+fileRDD_filter = fileRDD.filter(lambda line: 'Spark' in line)
+print("The total number of lines with the keyword Spark is", fileRDD_filter.count())
+for line in fileRDD_filter.take(4):
+  print(line)
